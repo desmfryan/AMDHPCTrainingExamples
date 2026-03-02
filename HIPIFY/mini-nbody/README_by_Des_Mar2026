@@ -1,0 +1,11 @@
+cuda                       folder:
+contains the original content, not modified
+
+Cuda_HIP_on_Jade2.5        folder:
+contains the hipified nbody-orig.cu file, & rocm/hipcxx build executable, & it works(done on Jade2.5)
+note: rocm build works with some warnings 'no disjoint' (Pete Heywood advises can be safely ignored)
+
+Cuda_HIP_usingOpenCode     folder:
+contains the hipified nbody-orig.cu produced by OpenCode AI coding agent (on my laptop),
+uploaded to JADE2.5, rocm/hipcc build executable, same warnings & it works.
+
