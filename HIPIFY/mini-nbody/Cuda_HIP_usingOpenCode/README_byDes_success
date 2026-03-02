@@ -1,0 +1,20 @@
+
+
+For Cuda conversion using OpenCode (on laptop) which generated the hip file called:
+nbody-hip.cpp
+
+upload to JADE2.5, interactive sesh on Mi300X GPU
+
+
+ssh jade-training35@jade-login01.arc.ox.ac.uk (temporary account)
+M*****_121_*
+
+srun -p short --time=00:10:00 --cpus-per-task=8 --mem=20G --gres=gpu:mi300x:1 --pty /bin/bash
+
+module load rocm  (loads rocm 6.4.2)
+mv nobdy-hip.cpp nbody-orig-OpenCode.cu.hip (rename)
+hipcc --offload=native nbody-orig-OpenCode.cu.hip -o run_opencode
+./run_opencode
+
+SUCCESS!!!
+
