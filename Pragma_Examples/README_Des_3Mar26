@@ -1,0 +1,7 @@
+Examples looked at:
+
+OpenMP/C/1_saxpy note saxpy = single precision A*[X+Y]
+1. 0_saxpy_portyourself     using openmp on available cpu cores for 
+2. 1_saxpy_omptarget        using openmp offload to GPU
+
+Generated batch scripts for both the above & submitted on Jade2.5, could not get an interactive session
