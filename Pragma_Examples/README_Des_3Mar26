@@ -1,7 +1,13 @@
 Examples looked at:
 
 OpenMP/C/1_saxpy note saxpy = single precision A*[X+Y]
-1. 0_saxpy_portyourself     using openmp on available cpu cores for 
-2. 1_saxpy_omptarget        using openmp offload to GPU
+1. 0_saxpy_portyourself     using openmp on 1, 2, & 8 cpu cores (note more cores not faster for the small problem size). Batch scripts only, no interactive session obtainable.
 
-Generated batch scripts for both the above & submitted on Jade2.5, could not get an interactive session
+2. same directory using openmp to offload to GPU (no memory management, no optimisation). Did by batch script & interactive session & confirmed GPU use using tmux (split window)
+tmux new -s gpu_test   (launch tmux)
+rocm-smi (to monitor GPU use in first window)
+ctrl b %   note ctrl b release keys & press % (or Shift 5) which splits the window.
+In the second window, module load, set env variables & run the gpu offload
+You will see gpu power & use increasing
+
+Ctrl b (release & pause) d    (detach split window).
